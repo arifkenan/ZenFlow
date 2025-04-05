@@ -1,0 +1,40 @@
+<aside class="sidebar" [class.collapsed]="isCollapsed">
+  <nav>
+    <ul class="nav-menu">
+
+      <li class="nav-item">
+        <app-button [label]="'Dashboard'"
+                    [icon]="'fas fa-home'"
+                    [sidebar]="true"
+                    [selected]="isActive('/dashboard')"
+                    (clickEvent)="navigateTo('/dashboard')">
+        </app-button>
+      </li>
+
+      <li class="nav-item dropdown-container">
+        <app-button [label]="'Profile'"
+                    [icon]="'fas fa-user'"
+                    [sidebar]="true"
+                    [selected]="isActive('/profile')"
+                    (clickEvent)="toggleDropdown()">
+        </app-button>
+
+        <ul class="dropdown-menu custom-dropdown" *ngIf="dropdownOpen">
+          <li class="dropdown-item" (click)="navigateTo('/profile/settings')">
+            <i class="fas fa-cog fa-icon"></i>
+            <span>Settings</span>
+          </li>
+          <li class="dropdown-item" (click)="navigateTo('/profile/security')">
+            <i class="fas fa-lock fa-icon"></i>
+            <span>Security</span>
+          </li>
+          <li class="dropdown-item" (click)="navigateTo('/profile/logout')">
+            <i class="fas fa-sign-out-alt fa-icon"></i>
+            <span>Logout</span>
+          </li>
+        </ul>
+      </li>
+
+    </ul>
+  </nav>
+</aside>

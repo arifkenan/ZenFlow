@@ -1,0 +1,36 @@
+.sidebar-btn {
+  /* Mevcut stiller aynı kalacak */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  padding: 12px 16px;
+  gap: 14px;
+  background-color: transparent;
+  color: #e0e7ff;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  text-align: left;
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+}
+
+  .sidebar-btn:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #7ed6df;
+  }
+
+  /* Değişiklik burada! */
+  .sidebar-btn.active-sidebar-btn {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border-left: 4px solid #7ed6df;
+    font-weight: 600;
+  }
+
+    .sidebar-btn.active-sidebar-btn i {
+      color: #7ed6df;
+    }

@@ -1,0 +1,12 @@
+<button [type]="type"
+        [disabled]="disabled"
+        (click)="onClick()"
+        [ngClass]="buttonClasses">
+
+  <div class="button-content">
+    <i *ngIf="icon && iconPosition === 'left'" [ngClass]="icon"></i>
+    <span *ngIf="label">{{ label }}</span>
+    <i *ngIf="icon && iconPosition === 'right'" [ngClass]="icon"></i>
+    <ng-content></ng-content>
+  </div>
+</button>

@@ -1,0 +1,6 @@
+@ZenFlow.Server_HostAddress = http://localhost:5209
+
+GET {{ZenFlow.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
