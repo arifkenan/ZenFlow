@@ -1,5 +1,4 @@
 .sidebar-btn {
-  /* Mevcut stiller aynı kalacak */
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -23,7 +22,6 @@
     color: #7ed6df;
   }
 
-  /* Değişiklik burada! */
   .sidebar-btn.active-sidebar-btn {
     background-color: rgba(255, 255, 255, 0.1);
     color: #ffffff;
