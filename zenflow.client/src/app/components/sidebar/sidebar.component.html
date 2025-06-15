@@ -11,6 +11,24 @@
         </app-button>
       </li>
 
+      <li class="nav-item">
+        <app-button [label]="'Login'"
+                    [icon]="'fas fa-sign-in-alt'"
+                    [sidebar]="true"
+                    [selected]="isActive('/login')"
+                    (clickEvent)="navigateTo('/login')">
+        </app-button>
+      </li>
+
+      <li class="nav-item">
+        <app-button [label]="'Signup'"
+                    [icon]="'fas fa-user-plus'"
+                    [sidebar]="true"
+                    [selected]="isActive('/signup')"
+                    (clickEvent)="navigateTo('/signup')">
+        </app-button>
+      </li>
+
       <li class="nav-item dropdown-container">
         <app-button [label]="'Profile'"
                     [icon]="'fas fa-user'"

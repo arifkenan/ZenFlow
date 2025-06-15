@@ -1,0 +1,7 @@
+<form (ngSubmit)="onSubmit()">
+  <input name="username" [(ngModel)]="username" placeholder="Username" required>
+  <input name="password" [(ngModel)]="password" placeholder="Password" type="password" required>
+  <button type="submit">Signup</button>
+</form>
+<p *ngIf="error" class="error">{{ error }}</p>
+<p *ngIf="success" class="success">{{ success }}</p>

@@ -13,6 +13,7 @@ describe('InputComponent', () => {
 
     fixture = TestBed.createComponent(InputComponent);
     component = fixture.componentInstance;
+    spyOn(component.valueChange, 'emit');
     fixture.detectChanges();
     inputElement = fixture.nativeElement.querySelector('input');
   });
