@@ -23,6 +23,7 @@ export class ButtonComponent {
   @Input() disabled: boolean = false;
   @Input() sidebar: boolean = false;
   @Input() selected: boolean = false;
+  @Input() customClass: string = '';
   @Output() clickEvent = new EventEmitter<void>();
 
   get buttonClasses(): string[] {
@@ -37,6 +38,10 @@ export class ButtonComponent {
       classes.push('btn');
       classes.push(`btn-${this.variant}`);
       classes.push(`btn-${this.size}`);
+    }
+
+    if (this.customClass) {
+      classes.push(this.customClass);
     }
 
     return classes;

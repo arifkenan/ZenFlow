@@ -2,14 +2,6 @@
   <app-sidebar></app-sidebar>
 
   <div class="main-content">
-    <p>hello god</p>
-
-    <app-button label="Submit Form" variant="primary"></app-button>
-    <app-button label="Cancel" variant="danger" customClass="margin-left-10"></app-button>
-    <app-button label="Download" icon="fas fa-download" variant="success" iconPosition="left"></app-button>
-    <app-button label="Search" icon="fas fa-search" customClass="round-corners"></app-button>
-    <app-button icon="fas fa-house"></app-button>
-
-    <app-input [(value)]="myValue" placeholder="Type something..."></app-input>
+    <router-outlet></router-outlet>
   </div>
 </div>
